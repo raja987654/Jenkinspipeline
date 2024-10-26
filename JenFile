@@ -2,33 +2,33 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Bonjour') {
             steps {
-                echo 'Marhba bik fil Jenkins Pipeline!'
+                echo 'Bienvenue dans le pipeline Jenkins !'
             }
         }
         
-        stage('Build') {
+        stage('Construction') {
             steps {
-                echo 'Na3mlou build lil projet...'
-                // Hne normalement t7ott el commands mta3 el build
+                echo 'Nous effectuons la construction du projet...'
+                // Ici, vous devez normalement mettre les commandes de construction
             }
         }
         
         stage('Test') {
             steps {
-                echo 'Na3mlou el tests...'
-                // Hne normalement t7ott el commands mta3 el tests
+                echo 'Nous effectuons les tests...'
+                // Ici, vous devez normalement mettre les commandes de test
             }
         }
     }
     
     post {
         success {
-            echo 'El pipeline naja7 b kol khir!'
+            echo 'Le pipeline a réussi avec succès !'
         }
         failure {
-            echo 'Oups! Famma 7aja ma mchetch mrigla.'
+            echo 'Oups ! Il y a eu un problème.'
         }
     }
 }
